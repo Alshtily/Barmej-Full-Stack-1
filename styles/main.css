@@ -1,0 +1,501 @@
+/*-------------------١--------------------------*/
+/*                  ملحوظات                     */
+/*
+ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
+تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
+إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
+tony@barmej.com
+*/
+/*----------------------------------------------*/
+
+
+
+/*----------------------١-----------------------*/
+/*
+
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next 
+أو إن لم تجده فيمكنك استعمال خط 
+Lato
+
+*/
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url("../fonts/AvenirNext-Medium.woff"); /* File to be stored at your site */
+}
+@font-face {
+    font-family: 'Avenir Next Bold';
+    src: url("../fonts/AvenirNext-Bold.woff"); /* File to be stored at your site */
+}
+/*---------------------------------------------*/
+
+
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+/*
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p 
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+
+body {
+    margin: 0 auto;
+}
+
+.widgets {
+    padding: 20px;
+}
+
+
+/*----------------------------------------------*/
+
+
+
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+/*----------------------------------------------*/
+
+
+.mybuttoun {
+    padding: 15px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    border-radius: 30px;
+    
+    background-color: blue;
+}
+
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*                البناء العام للصفحة           */
+/*----------------------------------------------*/
+.container {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;    
+    margin-bottom: 10px;
+}
+
+
+
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
+
+header .container {
+    margin-top: 10px;
+    font-family: Avenir Next;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+
+}
+header hr{
+    
+    top: 5px;
+    display: flex;
+    content: '';
+    height: 0.2px;
+    width: 90%;
+    background: black;
+    
+}
+
+.main-nav li {
+    padding: 5px;
+    display: inline;
+}
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: 'Avenir Next';
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: normal;
+
+}
+
+
+
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+/*----------------------------------------------*/
+
+.hero .container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .hero__desc { 
+    width: 30%;
+    min-width: 300px; 
+}
+.hero .hero__image { align-items: center; }
+.hero__image img { width:  100%;}
+
+.hero__desc h1 {
+    word-break: break-all;
+}
+.hero-h1 {
+    font-family: 'Avenir Next Bold';
+    font-size: 250%;
+    word-break: break-all;
+}
+
+.hero__desc a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 100%;
+    font-family: "Avenir Next Bold";
+
+}
+
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+/*----------------------------------------------*/
+
+
+.meetYourMatch .container {
+    padding: 10px;
+    margin-top: 10%;   
+}
+
+.meetYourMatchــform {
+    text-align: center;
+}
+.switcher input {
+    margin: 50px;
+    z-index: 1;
+    position: absolute;
+    visibility: hidden;
+}
+.switcher {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.form-group input {
+
+    color: black;
+    text-align: center;
+    left: 10%;
+    width: 368px;
+    height: 55px;
+    background-color: white;
+    outline: none;
+    border: 1px solid #3040c4;
+    border-radius: 45px 0 0 45px;
+    background: url("../images/map-pin.png") no-repeat 1.3vw 17px;
+}
+.form-group input::placeholder {
+    color: #303fc434;
+}
+
+.button.is-primary {
+    position: relative;
+    margin-left: -111px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background-color: #3040c4;
+  }
+.form-group button {
+width: 140px;
+  height: 67px;
+  z-index: 2;
+  outline: none;
+  font-size: 17px;
+  position: relative;
+  bottom: 2px;
+}
+.switcher span {
+    font-weight: bold;
+    font-size: 24px;
+    color: #221461;
+    margin: 50px;
+    font-family: 'Avenir Next';
+    
+}
+.meetYourMatchــform img {
+    width: 100px;
+}
+.form-group input {
+    margin-top: 10px;
+}
+.container .meetYourMatchــcontent h2 {
+    font-family: 'Avenir Next Bold';
+    font-size: 250%;
+}
+.is-searchResults {
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   
+    justify-content: space-around;
+}
+.is-searchResults .widget {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    width: 350px;
+   background-color: rgb(255, 255, 255);
+   margin: 10px;
+}
+
+.is-searchResults .widget img {
+    width: 100%;
+}
+.is-searchResults .widget__desc {
+padding: 6px;
+height: 150px
+}
+
+.widget__desc h4 {
+    font-family: "Avenir Next Bold";
+    font-size: 20px;
+}
+.widget__desc p {
+    font-family: "Avenir Next";
+    font-size: 18px;
+}
+
+.meetYourMatchــcontent h2 {
+    text-align: center;
+}
+
+.meetYourMatch__background {
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    height: 500px;
+    background-color: #f2e6ff;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+/*----------------------------------------------*/
+
+.howItWorks .container {
+  margin-top: 10%;
+}
+.howItWorks .container h2 {
+    font-family: 'Avenir Next Bold';
+    font-size: 250%;
+}
+.is-howItWorks {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+.is-howItWorks .widget {
+    margin: 10px;
+    width: 350px;
+    margin: 10px;
+    
+}
+
+.is-howItWorks .widget .widget__image img {
+    width: 100%;
+}
+.is-howItWorks .widget .widget__desc h3 {
+    text-align: center;
+    font-family: "Avenir Next Bold";
+    font-size: 30px;
+
+}
+.is-howItWorks .widget .widget__desc p {
+    text-align: center;
+    font-family: "Avenir Next";
+    font-size: 20px;
+    color: gray;
+
+}
+
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+/*----------------------------------------------*/
+
+.stories .container {
+    padding: 10px;
+    margin-top: 10%;
+    font-family: "Avenir Next";
+    
+
+}
+
+.stories-h2 {
+    font-family: 'Avenir Next Bold';
+    font-size: 250%;
+    
+}
+.stories .container .heading-paragraph {
+    width: 50%;
+    min-width: 375px;
+    font-family: "Avenir Next";
+    font-size: 20px;
+    color: gray;
+}
+.pipip {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.stories .container .widgets {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+.stories .container .widget {
+    margin: 10px;
+    background-color: white;
+    width: 375px;
+    
+}
+.stories .container .widget__desc {
+    padding: 10px;
+}
+.stories .container .widget__image img { width: 100%;}
+
+.stories a {
+    text-decoration: none;
+    color: blue;
+}
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+
+.actions  {
+    
+    height: 250px; 
+    text-align: center;
+    width: 100%;
+    background-color: blue;
+    padding-top: 10px;
+    padding-bottom: 49px;
+    
+}
+.actions .container {
+    margin-top: 87.5px;
+    margin-bottom: 87.5px;
+    width: 320px;
+    height: 75px;
+}
+
+.actions .container h2 {
+    font-family: "Avenir Next Bold";
+    color: white;
+}
+
+.buttouns {
+    margin-top: 20px;
+}
+
+
+.mybuttoun-blue {
+    text-decoration: none;
+    color: blue;
+    padding: 15px;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    border-radius: 30px;    
+    background-color: white;
+    margin: 10px;
+    
+    
+}
+
+.mybuttoun-white {
+    border-style: solid;
+    border-width: medium;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px auto;
+    padding: 15px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    border-radius: 30px;    
+    background-color: blue;
+}
+
+
+
+
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+
+footer .container {
+    margin-bottom: 0px;
+    margin-left: 0px auto;
+    margin-right: 0px auto;
+
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .copyrights {
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+}
+footer .item {
+    width: 200px;
+
+}
+ footer ul {
+    text-decoration: none;
+    list-style: none;
+}
+footer ul {
+
+    padding: 0;
+    text-decoration: none;
+}
+
+footer .footer-nav {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+footer h5 {
+    font-family: 'Avenir Next Bold';
+}
+footer a {
+    text-decoration: none;
+    font-family: 'Avenir Next';
+    color: gray;
+}
+
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+/*----------------------------------------------*/
